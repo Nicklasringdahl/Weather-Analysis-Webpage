@@ -2,80 +2,103 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Latitude</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
 
 
-  <div class="container">
-    <nav class="navbar">
-      <li class="nav-item">
-        <a class="nav-link active" href="..\index.html">Latitude</a>
-      </li>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Visualisations
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="Max_temp.html">Max Temperature</a>
-          <a class="dropdown-item" href="Humidity.html">Humidity</a>
-          <a class="dropdown-item" href="Cloudiness.html">Cloudiness</a>
-          <a class="dropdown-item" href="Wind_speed.html">Wind Speed</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="..\index.html">Latitude</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav ms-auto">
 
-        </div>
-        <a class="btn btn-primary" href="Data.html" role="button">Data</a>
-        <a class="btn btn-primary" href="Comparisons.html" role="button">Comparisons</a>
-
-    </nav>
-
- <div background-color: lightblue>
-
-    <header class="header">
-      <h1>Comparisons</h1>
-    </header>
-    <main>
-    </br>
-
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <article>
-          <a target="_blank" href="Humidity.html">
-          <img src="Resources\assets\images\Fig2.png" class="img-fluid" alt="Humidity Map">
-          </a>
-          <p><em>Humidity Map</em></p>
-          </article>
-        </div>
-        <div class="col"><article>
-          <a href="Max_temp.html">
-          <img target="_blank" src="Resources\assets\images\Fig3.png" class="img-fluid" alt="Tempurature Map">
-          </a>
-          <p><em>Temperature Map</em></p>
-        </article></div>
-        <div class="w-100"></div>
-        <div class="col"><figure>
-          <a target="_blank" href="Wind_speed.html">
-          <img src="Resources\assets\images\Fig4.png" class="img-fluid" alt="Wind Map">
-          </a>
-          <figcaption><em>Wind Map</em></figcaption>
-        </figure></div>
-        <div class="col">   
-               <a target="_blank" href="Cloudiness.html">
-          <img src="Resources\assets\images\Fig3.png" class="img-fluid" alt="Cloudiness">
-        </a>
-        <p><em>Cloudiness</em></p>
-        </article></div>
+          <li class="nav-item">
+            <a class="nav-link" href="Data.html">Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Comparisons.html">Comparisons</a>
+            
+            <li class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Plots
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="Max_temp.html">Max Temperature</a>
+                  <a class="dropdown-item" href="Humidity.html">Humidity</a>
+                  <a class="dropdown-item" href="Cloudiness.html">Cloudiness</a>
+                  <a class="dropdown-item" href="Wind_speed.html">Wind Speed</a>
+                </div>
+            </li>
+        </ul>
       </div>
     </div>
+  </nav>
+
+  <div class="jumbotron text-center">
+    <h1>Comparisons</h1> 
+    <p>Click on any visualization to get an in-depth analysis</p> 
+  </div>
+
+  <div class="container-fluid"> 
+      <div class="row text-center">
+        <div class="col-sm-6">
+          <div class="thumbnail">
+            <a   href="Max_temp.html">
+            <img src="Resources\assets\images\Fig1.png"  > 
+            </a>
+            <p><strong>City latitude vs Max Temperature</strong></p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="thumbnail">
+            <a  href="Humidity.html">
+            <img src="Resources\assets\images\Fig2.png">
+            </a>
+            <p><strong>City latitude vs Humidity</strong></p>
+          
+          </div>
+        </div>
+    </div>
+  
+
+    <div class="row text-center">
+        <div class="col-sm-6">
+          <div class="thumbnail">
+            <a  href="Cloudiness.html">
+            <img src="Resources\assets\images\Fig3.png">
+            </a>
+            <p><strong>City latitude vs Cloudiness</strong></p>
+          
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="thumbnail">
+            <a  href="Wind_speed.html">
+            <img src="Resources\assets\images\Fig4.png">
+            </a>
+            <p><strong>City latitude vs Wind Speed</strong></p>
+            
+          </div>
+        </div>
+    </div>
+  </div>
 
 
- </div>
+
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

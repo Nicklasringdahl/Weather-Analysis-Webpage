@@ -2,39 +2,56 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Latitude</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
-  <div class="container">
-    <nav class="navbar">
-      <li class="nav-item">
-        <a class="nav-link active" href="..\index.html">Latitude</a>
-      </li>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Visualisations
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="Max_temp.html">Max Temperature</a>
-          <a class="dropdown-item" href="Humidity.html">Humidity</a>
-          <a class="dropdown-item" href="Cloudiness.html">Cloudiness</a>
-          <a class="dropdown-item" href="Wind_speed.html">Wind Speed</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="..\index.html">Latitude</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav ms-auto">
 
-        </div>
-        <a class="btn btn-primary" href="Data.html" role="button">Data</a>
-        <a class="btn btn-primary" href="Comparisons.html" role="button">Comparisons</a>
+          <li class="nav-item">
+            <a class="nav-link" href="Data.html">Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Comparisons.html">Comparisons</a>
+            
+            <li class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Plots
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="Max_temp.html">Max Temperature</a>
+                  <a class="dropdown-item" href="Humidity.html">Humidity</a>
+                  <a class="dropdown-item" href="Cloudiness.html">Cloudiness</a>
+                  <a class="dropdown-item" href="Wind_speed.html">Wind Speed</a>
+                </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    </nav>
+  <div class="jumbotron text-center">
+    <h1>A table of the Data used in the visualisations</h1> 
+    <p>The following table includes all of the data used for plotting</p> 
+  </div>
 
-
-    <header class="header"><h3>A table of the Data used in the visualisations</h3></header>
-    <lI>The following table includes all of the data used for plotting </lI>
+<div class="container-fluid">
     <table class="table table-striped table-dark">
       <thead>
         <tr style="text-align: right;">
@@ -7166,7 +7183,7 @@
       </tbody>
     </table>
 
-
+</div>
 
 
 

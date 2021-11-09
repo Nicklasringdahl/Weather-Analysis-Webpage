@@ -1,74 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Latitude</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="WebVisualisation\styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="WebVisualisation\bootstrap.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<body>
 
-  <div class="container">
-    <nav class="navbar">
-      <li class="nav-item">
-        <a class="nav-link active" href="index.html">Latitude</a>
-      </li>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Visualisations
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="WebVisualisation\Max_temp.html">Max Temperature</a>
-          <a class="dropdown-item" href="WebVisualisation\Humidity.html">Humidity</a>
-          <a class="dropdown-item" href="WebVisualisation\Cloudiness.html">Cloudiness</a>
-          <a class="dropdown-item" href="WebVisualisation\Wind_speed.html">Wind Speed</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Latitude</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav ms-auto">
 
+              <li class="nav-item">
+                <a class="nav-link" href="WebVisualisation\Data.html">Data</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="WebVisualisation\Comparisons.html">Comparisons</a>
+                
+                <li class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Plots
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="WebVisualisation\Max_temp.html">Max Temperature</a>
+                      <a class="dropdown-item" href="WebVisualisation\Humidity.html">Humidity</a>
+                      <a class="dropdown-item" href="WebVisualisation\Cloudiness.html">Cloudiness</a>
+                      <a class="dropdown-item" href="WebVisualisation\Wind_speed.html">Wind Speed</a>
+                    </div>
+                </li>
+            </ul>
+          </div>
         </div>
-        <a class="btn btn-primary" href="WebVisualisation\Data.html" role="button">Data</a>
-        <a class="btn btn-primary" href="WebVisualisation\Comparisons.html" role="button">Comparisons</a>
-
-    </nav>
+      </nav>
 
 
-    <header class="header">
-      <h1>Summary: Latitude vs. X </h1>
-    </header>
-    <main>
 
-      <div class="container" background-color='Blue'>
+<div class="jumbotron text-center">
+  <h1>Weather visualizations</h1> 
+  <p>Plotting the Weather</p> 
+</div>
 
-        <div class="row">
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Project details</h2><br>
+      <h4><strong>Purpose:</strong> The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</h4><br>
+      <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed </p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon">&#x2601;</span>
+    </div>
+  </div>
+</div>
 
-         <div class="col-md-6">
-            <img src="WebVisualisation\Resources\assets\images\Fig1.png" class="img-fluid" alt="Cloudy Map">
-         </div>
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
 
-            <div class="col-md-6">
-            <article class="post">
-            <h3>Project details</h3>
-            <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.
-            </p>
-            <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed </p>
-  
-           </article>
-            </div>
+    </div>
+    <div class="col-sm-8">
+      <h2>Projecting the weather</h2><br>
+      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid text-center ">
+  <h2>Visualisations</h2>
+  <div class="row text-center">
+    <div class="col-sm-3">
+      <div class="thumbnail">
+        <a  target="_blank" href="WebVisualisation\Max_temp.html">
+        <img src="WebVisualisation\Resources\assets\images\Fig1.png"  > 
+      </a>
+        <p><strong>City latitude vs Max Temperature</strong></p>
+        
       </div>
     </div>
+    <div class="col-sm-3">
+      <div class="thumbnail">
+        <a  target="_blank" href="WebVisualisation\Humidity.html">
+        <img src="WebVisualisation\Resources\assets\images\Fig2.png">
+        </a>
+        <p><strong>City latitude vs Humidity</strong></p>
+      
+      </div>
     </div>
-        
-        
-       
-      </section>
-    </main>
-  </div>
+    <div class="col-sm-3">
+      <div class="thumbnail">
+        <a  target="_blank" href="WebVisualisation\Cloudiness.html">
+        <img src="WebVisualisation\Resources\assets\images\Fig3.png">
+      </a>
+        <p><strong>City latitude vs Cloudiness</strong></p>
+     
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="thumbnail">
+        <a  target="_blank" href="WebVisualisation\Wind_speed.html">
+        <img src="WebVisualisation\Resources\assets\images\Fig4.png">
+      </a>
+        <p><strong>City latitude vs Wind Speed</strong></p>
+     
+      </div>
+    </div>
+</div>
+  
 
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
-
 </html>
